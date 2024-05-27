@@ -2,29 +2,6 @@ import Link from "next/link";
 import { getSEOTags } from "@/libs/seo";
 import config from "@/config";
 
-// CHATGPT PROMPT TO GENERATE YOUR TERMS & SERVICES — replace with your own data 👇
-
-// 1. Go to https://chat.openai.com/
-// 2. Copy paste bellow
-// 3. Replace the data with your own (if needed)
-// 4. Paste the answer from ChatGPT directly in the <pre> tag below
-
-// You are an excellent lawyer.
-
-// I need your help to write a simple Terms & Services for my website. Here is some context:
-// - Website: https://shipfa.st
-// - Name: ShipFast
-// - Contact information: marc@shipfa.st
-// - Description: A JavaScript code boilerplate to help entrepreneurs launch their startups faster
-// - Ownership: when buying a package, users can download code to create apps. They own the code but they do not have the right to resell it. They can ask for a full refund within 7 day after the purchase.
-// - User data collected: name, email and payment information
-// - Non-personal data collection: web cookies
-// - Link to privacy-policy: https://shipfa.st/privacy-policy
-// - Governing Law: France
-// - Updates to the Terms: users will be updated by email
-
-// Please write a simple Terms & Services for my site. Add the current date. Do not add or explain your reasoning. Answer:
-
 export const metadata = getSEOTags({
   title: `Terms and Conditions | ${config.appName}`,
   canonicalUrlRelative: "/tos",
@@ -32,14 +9,14 @@ export const metadata = getSEOTags({
 
 const TOS = () => {
   return (
-    <main className="max-w-xl mx-auto">
+    <main className="mx-auto max-w-xl">
       <div className="p-5">
         <Link href="/" className="btn btn-ghost">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 20 20"
             fill="currentColor"
-            className="w-5 h-5"
+            className="h-5 w-5"
           >
             <path
               fillRule="evenodd"
@@ -49,47 +26,41 @@ const TOS = () => {
           </svg>
           Back
         </Link>
-        <h1 className="text-3xl font-extrabold pb-6">
+        <h1 className="pb-6 text-3xl font-extrabold">
           Terms and Conditions for {config.appName}
         </h1>
 
         <pre
-          className="leading-relaxed whitespace-pre-wrap"
+          className="whitespace-pre-wrap leading-relaxed"
           style={{ fontFamily: "sans-serif" }}
         >
-          {`Last Updated: September 26, 2023
+          {`Last Updated: May 27, 2024
 
-Welcome to ShipFast!
+1. Introduction
+Welcome to Chalked Cast. By accessing or using our website at https://chalkedcast.com, you agree to be bound by these Terms & Services.
 
-These Terms of Service ("Terms") govern your use of the ShipFast website at https://shipfa.st ("Website") and the services provided by ShipFast. By using our Website and services, you agree to these Terms.
+2. Description of Service
+Chalked Cast provides information about the official Chalked Cast podcast, including podcast episodes, social media links, listening platforms, and a link to Patreon for premium membership options.
 
-1. Description of ShipFast
+3. Ownership
+Chalked Cast does not claim ownership of any content on this site. The website is for informational purposes only.
 
-ShipFast is a platform that offers a JavaScript code boilerplate to assist entrepreneurs in launching their startups more efficiently.
+4. User Data Collection
+We collect your email address for the purpose of providing updates and notifications. For more details, please refer to our Privacy Policy at https://chalkedcast.com/privacy-policy.
 
-2. Ownership and Usage Rights
+5. Non-Personal Data Collection
+We use web cookies to collect non-personal data to improve your experience on our website.
 
-When you purchase a package from ShipFast, you gain the right to download and use the code provided for creating applications. You own the code you create but do not have the right to resell it. We offer a full refund within 7 days of purchase, as specified in our refund policy.
+6. Governing Law
+These Terms & Services are governed by the laws of the United States.
 
-3. User Data and Privacy
+7. Updates to the Terms
+We may update these Terms & Services from time to time. You will be notified of any changes via email.
 
-We collect and store user data, including name, email, and payment information, as necessary to provide our services. For details on how we handle your data, please refer to our Privacy Policy at https://shipfa.st/privacy-policy.
+8. Contact Us
+If you have any questions about these Terms & Services, please contact us at rizzo@chalkedcast.com.
 
-4. Non-Personal Data Collection
-
-We use web cookies to collect non-personal data for the purpose of improving our services and user experience.
-
-5. Governing Law
-
-These Terms are governed by the laws of France.
-
-6. Updates to the Terms
-
-We may update these Terms from time to time. Users will be notified of any changes via email.
-
-For any questions or concerns regarding these Terms of Service, please contact us at marc@shipfa.st.
-
-Thank you for using ShipFast!`}
+Thank you for visiting Chalked Cast!`}
         </pre>
       </div>
     </main>

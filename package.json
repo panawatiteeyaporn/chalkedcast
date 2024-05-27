@@ -20,6 +20,7 @@
     "eslint": "8.47.0",
     "eslint-config-next": "13.4.19",
     "form-data": "^4.0.0",
+    "framer-motion": "^11.2.6",
     "mailgun.js": "^9.4.1",
     "mongodb": "^5.9.2",
     "mongoose": "^7.6.10",
@@ -32,8 +33,10 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-hot-toast": "^2.4.1",
+    "react-slick": "^0.30.2",
     "react-syntax-highlighter": "^15.5.0",
     "react-tooltip": "^5.26.3",
+    "slick-carousel": "^1.8.1",
     "stripe": "^13.11.0",
     "zod": "^3.22.4"
   },
@@ -44,10 +47,13 @@
     "@types/node": "^20.12.2",
     "@types/react": "^18.2.73",
     "@types/react-dom": "^18.2.23",
+    "@types/react-slick": "^0.23.13",
     "@types/react-syntax-highlighter": "^15.5.11",
     "autoprefixer": "^10.4.19",
     "daisyui": "^4.10.1",
     "postcss": "^8.4.38",
+    "prettier": "^3.2.5",
+    "prettier-plugin-tailwindcss": "^0.5.14",
     "tailwindcss": "^3.4.3",
     "typescript": "^5.4.3"
   }

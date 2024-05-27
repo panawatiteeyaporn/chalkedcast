@@ -10,13 +10,17 @@ module.exports = {
       backgroundImage: {
         gradient:
           "linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82)",
+        "ch-bg": "url('/chc_bg_p.png')",
+        "ch-nav": "url('/chc_nav.png')",
       },
       animation: {
         opacity: "opacity 0.25s ease-in-out",
         appearFromRight: "appearFromRight 300ms ease-in-out",
-        wiggle: "wiggle 1.5s ease-in-out infinite",
-        popup: "popup 0.25s ease-in-out",
+        wiggle: "wiggle 1.25s ease-in-out infinite",
+        popup: "popup 0.7s ease-in-out",
         shimmer: "shimmer 3s ease-out infinite alternate",
+        spinSlow: "spin 3s linear infinite",
+        pingSlow: "ping 2s cubic-bezier(0, 0, 0.2, 1) infinite",
       },
       keyframes: {
         opacity: {
@@ -63,6 +67,6 @@ module.exports = {
     // You can add another theme among the list of 30+
     // Add "data-theme='theme_name" to any HTML tag to enable the 'theme_name' theme.
     // https://daisyui.com/
-    themes: ["light", "dark"],
+    themes: ["dark"],
   },
 };

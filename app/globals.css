@@ -5,6 +5,11 @@
 html,
 body {
   scroll-behavior: smooth !important;
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
 }
 
 /* It makes the HTML progress bar filling smooth when value change. */
@@ -14,9 +19,13 @@ progress::-webkit-progress-value {
 
 @layer base {
   .btn-gradient {
-    @apply !bg-gradient !bg-[length:300%_300%] hover:saturate-[1.2] shadow duration-100 !border-0 !border-transparent !bg-transparent animate-shimmer disabled:!bg-none disabled:!bg-gray-500/30  !text-white;
+    @apply animate-shimmer !border-0 !border-transparent !bg-transparent !bg-gradient !bg-[length:300%_300%] !text-white shadow duration-100 hover:saturate-[1.2] disabled:!bg-gray-500/30  disabled:!bg-none;
   }
   .btn {
     @apply !capitalize;
   }
+}
+
+.slick-slide > div {
+  margin: 0 10px;
 }
