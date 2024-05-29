@@ -1,6 +1,5 @@
-import Link from "next/link";
-import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 const Social = () => {
   return (
@@ -10,7 +9,7 @@ const Social = () => {
           <p className="py-4 text-left text-2xl font-semibold tracking-tight lg:text-3xl">
             Become a premium member
           </p>
-          <p className="mx-auto max-w-2xl py-4 text-left text-xl leading-relaxed opacity-80">
+          <p className="mx-auto max-w-2xl py-4 text-center text-xl leading-relaxed opacity-80 lg:text-left">
             Support us and get even more from Chalked Cast—sign up on Patreon
             today
           </p>
