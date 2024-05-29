@@ -8,7 +8,7 @@ module.exports = {
   theme: {
     extend: {
       screens: {
-        xxs: "410px",
+        xxs: "425px",
       },
       backgroundImage: {
         gradient:

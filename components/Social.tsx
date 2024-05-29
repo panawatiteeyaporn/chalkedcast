@@ -6,7 +6,7 @@ const Social = () => {
     <section className="bg-[#101111]">
       <div className="lg:py-15 mx-auto flex max-w-4xl flex-col items-center justify-center gap-10 px-10 py-8 lg:flex-row">
         <div className="flex flex-col items-center justify-center text-center lg:w-4/5 lg:items-start lg:text-left">
-          <p className="py-4 text-left text-2xl font-semibold tracking-tight lg:text-3xl">
+          <p className="py-4 text-center text-2xl font-semibold tracking-tight lg:text-left lg:text-3xl">
             Become a premium member
           </p>
           <p className="mx-auto max-w-2xl py-4 text-center text-xl leading-relaxed opacity-80 lg:text-left">
@@ -17,7 +17,7 @@ const Social = () => {
           <Link
             href={"https://www.patreon.com/ChalkedCast"}
             key={"patreon"}
-            className="w-full"
+            className="xxs:block hidden w-full"
             title="Subscribe on Patreon"
             target="_blank"
           >
@@ -32,9 +32,29 @@ const Social = () => {
               <p className="items-center text-3xl font-extrabold lg:text-4xl">
                 Patreon
               </p>
-              <button className="xxs:block btn ml-auto hidden rounded-lg bg-[#99230E]">
+              <button className="btn ml-auto rounded-lg bg-[#99230E]">
                 Subscribe Now
               </button>
+            </div>
+          </Link>
+          <Link
+            href={"https://www.patreon.com/ChalkedCast"}
+            key={"patreon"}
+            className="xxs:hidden w-full"
+            title="Subscribe on Patreon"
+            target="_blank"
+          >
+            <div className="flex w-full justify-center rounded-xl border bg-ch-nav bg-cover p-3">
+              <Image
+                src={"/patreon_white_icon.png"}
+                alt="patreon"
+                width={32}
+                height={32}
+                className="mr-3 h-12 w-11"
+              />
+              <p className="items-center text-3xl font-extrabold lg:text-4xl">
+                Patreon
+              </p>
             </div>
           </Link>
         </div>
