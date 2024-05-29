@@ -3,6 +3,7 @@ import Episodes from "@/components/Episodes";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
+import Social from "@/components/Social";
 import { Suspense } from "react";
 
 export default function Home() {
@@ -11,8 +12,9 @@ export default function Home() {
       <Suspense>
         <Header />
       </Suspense>
-      <main className="bg-zinc-950">
+      <main>
         <Hero />
+        <Social />
         <Episodes />
         <About />
       </main>

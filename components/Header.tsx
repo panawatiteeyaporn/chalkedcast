@@ -54,7 +54,6 @@ const Header = () => {
               src={logo}
               alt={`${config.appName} logo`}
               className="w-20"
-              placeholder="blur"
               priority={true}
             />
           </Link>

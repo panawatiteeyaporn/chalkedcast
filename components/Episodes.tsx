@@ -13,6 +13,13 @@ const Episodes = () => {
     key: string;
   }[] = [
     {
+      url: "https://youtu.be/DAcE1vn6erk?si=Nc4mWO_fsCamdFVd",
+      number: 82,
+      description:
+        "Karmine Corp Missing the Major, Spain Poach SSA Major Slot, Did Furia throw RLCS?",
+      key: "ep82",
+    },
+    {
       url: "https://youtu.be/fKHc99QS8s8?si=QqNwyn5XJa7f99bd",
       number: 81,
       description:
@@ -108,55 +115,61 @@ const Episodes = () => {
   };
 
   return (
-    <section
-      className="mx-auto max-w-7xl items-center justify-center gap-16 bg-[#0E0F0F] px-8 py-8 lg:gap-20 lg:py-20"
-      id="episodes"
-    >
-      <h2 className="text-center text-4xl font-extrabold tracking-tight lg:text-6xl">
-        Check out our latest episode:
-      </h2>
-      <div className="mx-auto flex max-w-7xl flex-col items-start justify-center gap-16 px-8 py-8 lg:flex-row lg:gap-20 lg:py-20">
-        <iframe
-          width="560"
-          height="315"
-          className="border-2 border-[#320F12]"
-          src="https://www.youtube.com/embed/fKHc99QS8s8?si=6dgutRj9g0uYcgGV"
-          title="YouTube video player"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerPolicy="strict-origin-when-cross-origin"
-          allowFullScreen
-        ></iframe>
-      </div>
-      <h2 className="text-center text-3xl tracking-tight md:-mb-4 lg:text-5xl">
-        More Episodes
-      </h2>
+    <>
+      <section
+        className="mx-auto max-w-5xl items-center justify-center px-8 py-8 lg:py-20"
+        id="episodes"
+      >
+        <h2 className="text-center text-4xl font-extrabold tracking-tight lg:text-6xl">
+          Check out our latest episode:
+        </h2>
+        <div className="mx-auto flex max-w-7xl justify-center px-8 py-8 lg:pb-10 lg:pt-20">
+          <iframe
+            width="560"
+            height="315"
+            className="border-2 border-[#320F12]"
+            src="https://www.youtube.com/embed/DAcE1vn6erk?si=XgWXuUlUs2O1VKX6"
+            title="YouTube video player"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerPolicy="strict-origin-when-cross-origin"
+            allowFullScreen
+          ></iframe>
+        </div>
+      </section>
+      <section className="bg-[#101111] py-8 lg:pt-10">
+        <h2 className="text-center text-3xl tracking-tight lg:text-5xl">
+          More Episodes
+        </h2>
 
-      <div className="slider-container mx-auto max-w-7xl gap-16 px-8 py-8 lg:flex-row lg:gap-20 lg:py-20">
-        <Slider {...settings}>
-          {episodes.map((episode) => (
-            <div
-              className="card h-full w-96 bg-base-100 shadow-xl lg:card-side"
-              key={episode.key}
-            >
-              <div className="card-body rounded-xl bg-[#320F12]">
-                <h2 className="card-title">{`Chalked Cast #${episode.number}`}</h2>
-                <p>{episode.description}</p>
-                <div className="card-actions justify-end">
-                  <Link
-                    href={episode.url}
-                    key={episode.key}
-                    title={`Chalked Cast #${episode.number}`}
-                    target="_blank"
-                  >
-                    <button className="btn btn-primary">Listen</button>
-                  </Link>
+        <div className="slider-container lg:py-17 mx-auto max-w-7xl gap-16 px-8 py-8 lg:flex-row">
+          <Slider {...settings}>
+            {episodes.map((episode) => (
+              <div
+                className="card h-full w-96 rounded-xl bg-base-100 shadow-xl lg:card-side"
+                key={episode.key}
+              >
+                <div className="card-body max-h-52 rounded-xl bg-[#320F12]">
+                  <h2 className="card-title">{`Chalked Cast #${episode.number}`}</h2>
+                  <p className="line-clamp-2">{episode.description}</p>
+                  <div className="card-actions justify-end">
+                    <Link
+                      href={episode.url}
+                      key={episode.key}
+                      title={`Chalked Cast #${episode.number}`}
+                      target="_blank"
+                    >
+                      <button className="btn rounded-lg bg-[#004BA8]">
+                        Listen
+                      </button>
+                    </Link>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
-        </Slider>
-      </div>
-    </section>
+            ))}
+          </Slider>
+        </div>
+      </section>
+    </>
   );
 };
 

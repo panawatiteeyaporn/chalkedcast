@@ -30,7 +30,7 @@ const About = () => {
 
   return (
     <section
-      className="mx-auto max-w-7xl items-center justify-center gap-16 bg-[#0E0F0F] px-8 py-8 lg:gap-20 lg:py-20"
+      className="mx-auto max-w-7xl items-center justify-center gap-16 px-8 py-8 lg:gap-20 lg:py-20"
       id="about"
     >
       <h2 className="text-center text-4xl font-extrabold tracking-tight lg:text-6xl">
@@ -40,38 +40,109 @@ const About = () => {
         </span>
       </h2>
 
-      {teams.map((host) => (
-        <div
-          className="mx-auto flex max-w-7xl flex-col items-start justify-center gap-16 px-8 py-8 lg:flex-row lg:gap-20 lg:py-20"
-          key={host.key}
+      <div
+        className="mx-auto flex max-w-7xl flex-col items-center justify-center gap-16 px-8 py-8 lg:flex-row lg:gap-20 lg:py-20"
+        key={teams[0].key}
+      >
+        <motion.div
+          initial={{ opacity: 0, x: -70 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ ease: "easeIn", duration: 0.7 }}
+          viewport={{ once: true }}
+          className="lg:w-full"
         >
-          <motion.div
-            initial={{ opacity: 0, x: -70 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ ease: "easeIn", duration: 0.7 }}
-            viewport={{ once: true }}
-            className="lg:w-full"
-          >
-            <Image
-              src={host.image}
-              alt=""
-              className="rounded-xl border-2 border-[#320F12]"
-              priority={true}
-              width={500}
-              height={500}
-            />
-          </motion.div>
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ ease: "easeIn", duration: 0.7 }}
-            viewport={{ once: true }}
-            className="flex w-full flex-col items-center justify-center gap-10 rounded-xl bg-[#320F12] p-3 text-center lg:items-start lg:gap-14 lg:text-left"
-          >
-            <p>{host.description}</p>
-          </motion.div>
-        </div>
-      ))}
+          <Image
+            src={teams[0].image}
+            alt=""
+            className="rounded-xl border-2 border-[#320F12]"
+            priority={true}
+            width={500}
+            height={500}
+          />
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, x: 50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ ease: "easeIn", duration: 0.7 }}
+          viewport={{ once: true }}
+          className="flex w-full flex-col gap-10 rounded-xl bg-[#320F12] p-3 text-center lg:gap-14 lg:text-left"
+        >
+          <p>{teams[0].description}</p>
+        </motion.div>
+      </div>
+
+      <div
+        className="mx-auto flex max-w-7xl flex-col items-center justify-center gap-16 px-8 py-8 lg:flex-row lg:gap-20 lg:py-20"
+        key={teams[1].key}
+      >
+        <motion.div
+          initial={{ opacity: 0, x: -70 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ ease: "easeIn", duration: 0.7 }}
+          viewport={{ once: true }}
+          className="hidden w-full flex-col items-center justify-center gap-10 rounded-xl bg-[#320F12] p-3 text-center lg:flex lg:items-start lg:gap-14 lg:text-left"
+        >
+          <p>{teams[1].description}</p>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, x: 50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ ease: "easeIn", duration: 0.7 }}
+          viewport={{ once: true }}
+          className="lg:w-full"
+        >
+          <Image
+            src={teams[1].image}
+            alt=""
+            className="rounded-xl border-2 border-[#320F12]"
+            priority={true}
+            width={500}
+            height={500}
+          />
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, x: -70 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ ease: "easeIn", duration: 0.7 }}
+          viewport={{ once: true }}
+          className="flex w-full flex-col items-center justify-center gap-10 rounded-xl bg-[#320F12] p-3 text-center lg:hidden lg:items-start lg:gap-14 lg:text-left"
+        >
+          <p>{teams[1].description}</p>
+        </motion.div>
+      </div>
+
+      <div
+        className="mx-auto flex max-w-7xl flex-col items-center justify-center gap-16 px-8 py-8 lg:flex-row lg:gap-20 lg:py-20"
+        key={teams[2].key}
+      >
+        <motion.div
+          initial={{ opacity: 0, x: -70 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ ease: "easeIn", duration: 0.7 }}
+          viewport={{ once: true }}
+          className="lg:w-full"
+        >
+          <Image
+            src={teams[2].image}
+            alt=""
+            className="rounded-xl border-2 border-[#320F12]"
+            priority={true}
+            width={500}
+            height={500}
+          />
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, x: 50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ ease: "easeIn", duration: 0.7 }}
+          viewport={{ once: true }}
+          className="flex w-full flex-col items-center justify-center gap-10 rounded-xl bg-[#320F12] p-3 text-center lg:items-start lg:gap-14 lg:text-left"
+        >
+          <p>{teams[2].description}</p>
+        </motion.div>
+      </div>
     </section>
   );
 };

@@ -33,21 +33,10 @@ const Shop = () => {
         <ButtonLead />
       </div>
       <div className="flex justify-center py-8 lg:py-20">
-        <Image
-          src="/chc_logo_mic.png"
-          alt="mic"
-          className="h-auto w-auto"
-          width={200}
-          height={200}
-        />
+        <Image src="/chc_logo_mic.png" alt="mic" width={180} height={180} />
       </div>
       <div className="flex justify-center">
-        <button
-          type="button"
-          className="btn disabled btn-primary animate-bounce rounded-full"
-        >
-          Building...
-        </button>
+        <span className="loading loading-bars loading-lg"></span>
       </div>
     </section>
   );
