@@ -158,7 +158,7 @@ const Episodes = () => {
                       title={`Chalked Cast #${episode.number}`}
                       target="_blank"
                     >
-                      <button className="btn rounded-lg bg-[#004BA8]">
+                      <button className="btn rounded-lg bg-[#99230E]">
                         Listen
                       </button>
                     </Link>

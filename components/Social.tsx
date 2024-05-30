@@ -17,11 +17,11 @@ const Social = () => {
           <Link
             href={"https://www.patreon.com/ChalkedCast"}
             key={"patreon"}
-            className="xxs:block hidden w-full"
+            className="hidden w-full xxs:block"
             title="Subscribe on Patreon"
             target="_blank"
           >
-            <div className="flex w-full rounded-xl border bg-ch-nav bg-cover p-3">
+            <div className="flex w-full rounded-xl border border-gray-700 bg-ch-nav bg-cover p-3">
               <Image
                 src={"/patreon_white_icon.png"}
                 alt="patreon"
@@ -40,7 +40,7 @@ const Social = () => {
           <Link
             href={"https://www.patreon.com/ChalkedCast"}
             key={"patreon"}
-            className="xxs:hidden w-full"
+            className="w-full xxs:hidden"
             title="Subscribe on Patreon"
             target="_blank"
           >
